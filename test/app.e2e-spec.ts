@@ -15,6 +15,7 @@ describe('Developer Task Management API (e2e)', () => {
   };
 
   beforeAll(async () => {
+    process.env.JWT_SECRET = process.env.JWT_SECRET || 'your-development-jwt-secret-key-change-in-production';
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
